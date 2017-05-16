@@ -1,0 +1,308 @@
+﻿class CfgRadio
+{
+	class actor_a_1
+	{
+		sound[] = {"\voice\actor_a_1.ogg", db, 1.0}; 
+		title = "";
+		// $STR_ACTOR_A_1
+	};
+
+	class actor_a_2
+	{
+		sound[] = {"\voice\actor_a_2.ogg", db, 1.0}; 
+		title = "";
+	};
+
+	class actor_a_3
+	{
+		sound[] = {"\voice\actor_a_3.ogg", db, 1.0}; 
+		title = "";
+	};
+
+	class actor_a_4
+	{
+		sound[] = {"\voice\actor_a_4.ogg", db, 1.0}; 
+		title = "";
+	};
+
+	class actor_a_5
+	{
+		sound[] = {"\voice\actor_a_5.ogg", db, 1.0}; 
+		title = "";
+	};
+
+	class actor_a_6
+	{
+		sound[] = {"\voice\actor_a_6.ogg", db, 1.0}; 
+		title = "";
+	};
+
+	class actor_a_7
+	{
+		sound[] = {"\voice\actor_a_7.ogg", db, 1.0}; 
+		title = "";
+	};
+};
+
+class CfgMusic
+{
+	class intro
+	{
+		sound[] = {"\music\intro.ogg", db, 1.0};
+	};
+	class land
+	{
+		sound[] = {"\music\land.ogg", db, 1.0};
+	};
+	class fortune
+	{
+		sound[] = {"\music\fortune.ogg", db, 1.0};
+	};
+	class death
+	{
+		sound[] = {"\music\death.ogg", db, 1.0};
+	};
+	class radio
+	{
+		sound[] = {"\music\radio.ogg", db, 1.0};
+	};
+	class outro
+	{
+		sound[] = {"\music\outro.ogg", db, 1.0};
+	};	
+	
+	class dynamic0
+	{
+		sound[] = {"\dynamic\dynamic0.ogg", db, 1.0};
+	};	
+	class dynamic1
+	{
+		sound[] = {"\dynamic\dynamic1.ogg", db, 1.0};
+	};	
+	class dynamic2
+	{
+		sound[] = {"\dynamic\dynamic2.ogg", db, 1.0};
+	};	
+	class dynamic3
+	{
+		sound[] = {"\dynamic\dynamic3.ogg", db, 1.0};
+	};	
+	class dynamic4
+	{
+		sound[] = {"\dynamic\dynamic4.ogg", db, 1.0};
+	};	
+	class dynamic5
+	{
+		sound[] = {"\dynamic\dynamic5.ogg", db, 1.0};
+	};	
+	class dynamic6
+	{
+		sound[] = {"\dynamic\dynamic6.ogg", db, 1.0};
+	};	
+	class dynamic7
+	{
+		sound[] = {"\dynamic\dynamic7.ogg", db, 1.0};
+	};	
+	class dynamic8
+	{
+		sound[] = {"\dynamic\dynamic8.ogg", db, 1.0};
+	};	
+	class dynamic9
+	{
+		sound[] = {"\dynamic\dynamic9.ogg", db, 1.0};
+	};	
+};
+
+class CfgSounds
+{
+	class bcg_wind
+	{
+		name = "bcg_wind";
+		sound[] = {"\sound\bcg_wind.ogg", 0.3, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_1
+	{
+		name = "rafala_1";
+		sound[] = {"\sound\rafala_1.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_2
+	{
+		name = "rafala_2";
+		sound[] = {"\sound\rafala_2.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_6
+	{
+		name = "rafala_6";
+		sound[] = {"\sound\rafala_6.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_7
+	{
+		name = "rafala_7";
+		sound[] = {"\sound\rafala_7.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_8
+	{
+		name = "rafala_8";
+		sound[] = {"\sound\rafala_8.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};	
+	class rafala_9
+	{
+		name = "rafala_9";
+		sound[] = {"\sound\rafala_9.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class tree_crack_1
+	{
+		name = "tree_crack_1";
+		sound[] = {"\sound\tree_crack_1.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class tree_crack_2
+	{
+		name = "tree_crack_2";
+		sound[] = {"\sound\tree_crack_2.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class tree_crack_3
+	{
+		name = "tree_crack_3";
+		sound[] = {"\sound\tree_crack_3.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};	
+	class tree_crack_4
+	{
+		name = "tree_crack_4";
+		sound[] = {"\sound\tree_crack_4.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class tree_crack_5
+	{
+		name = "tree_crack_5";
+		sound[] = {"\sound\tree_crack_5.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class tree_crack_6
+	{
+		name = "tree_crack_6";
+		sound[] = {"\sound\tree_crack_6.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};	
+	class tree_crack_7
+	{
+		name = "tree_crack_7";
+		sound[] = {"\sound\tree_crack_7.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};	
+	class tree_crack_8
+	{
+		name = "tree_crack_8";
+		sound[] = {"\sound\tree_crack_8.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};	
+	class tree_crack_9
+	{
+		name = "tree_crack_9";
+		sound[] = {"\sound\tree_crack_9.ogg", db+5, 1};
+		titles[] = {1, ""};
+	};
+	class lup_01
+	{
+		name = "lup_01";
+		sound[] = {"\sound\lup_01.ogg", 1, 1};
+		titles[] = {};
+	};
+	class lup_02
+	{
+		name = "lup_02";
+		sound[] = {"\sound\lup_02.ogg", 1, 1};
+		titles[] = {};
+	};
+	class lup_03
+	{
+		name = "lup_03";
+		sound[] = {"\sound\lup_03.ogg", 1, 1};
+		titles[] = {};
+	};
+	class tremurat_1
+	{
+		name = "tremurat_1";
+		sound[] = {"\sound\tremurat_1.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tremurat_2
+	{
+		name = "tremurat_2";
+		sound[] = {"\sound\tremurat_2.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tremurat_3
+	{
+		name = "tremurat_3";
+		sound[] = {"\sound\tremurat_3.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tremurat_4
+	{
+		name = "tremurat_4";
+		sound[] = {"\sound\tremurat_4.ogg", 1, 1};
+		titles[] = {1, ""};
+	};	
+	class NoSound 
+	{
+		name = "NoSound";
+		sound[] = {"", 0, 1};
+		titles[] = {0, ""};
+	};	
+	class tuse_1
+	{
+		name = "tuse_1";
+		sound[] = {"\sound\tuse_1.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tuse_2
+	{
+		name = "tuse_2";
+		sound[] = {"\sound\tuse_2.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tuse_3
+	{
+		name = "tuse_3";
+		sound[] = {"\sound\tuse_3.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tuse_4
+	{
+		name = "tuse_4";
+		sound[] = {"\sound\tuse_4.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tuse_5
+	{
+		name = "tuse_5";
+		sound[] = {"\sound\tuse_5.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class tuse_6
+	{
+		name = "tuse_6";
+		sound[] = {"\sound\tuse_6.ogg", 1, 1};
+		titles[] = {1, ""};
+	};	
+};
+
+class Header
+{
+        gameType = Coop;
+};
+
+enableDebugConsole = 2;
+author = "KoBRaAndrey";
+OnLoadName = "Storm At The Gates";
+//loadScreen = "thumb.jpg";

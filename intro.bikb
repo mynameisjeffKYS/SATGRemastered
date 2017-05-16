@@ -1,0 +1,44 @@
+﻿class Sentences
+{
+	class actor_a_1
+	{
+		text = $STR_ACTOR_A_1;
+		speech[] = {"\voice\actor_a_1.ogg"};
+		class Arguments{};
+	};
+	class actor_a_2
+	{
+		text = $STR_ACTOR_A_2;
+		speech[] = {"\voice\actor_a_2.ogg"};
+		class Arguments{};
+	};
+	class actor_a_3
+	{
+		text = $STR_ACTOR_A_3;
+		speech[] = {"\voice\actor_a_3.ogg"};
+		class Arguments{};
+	};
+	class actor_a_4
+	{
+		text = $STR_ACTOR_A_4;
+		speech[] = {"\voice\actor_a_4.ogg"};
+		class Arguments{};
+	};
+	class actor_a_5
+	{
+		text = $STR_ACTOR_A_5;
+		speech[] = {"\voice\actor_a_5.ogg"};
+		class Arguments{};
+	};
+	class actor_a_6
+	{
+		text = $STR_ACTOR_A_6;
+		speech[] = {"\voice\actor_a_6.ogg"};
+		class Arguments{};
+	};
+};
+
+class Arguments {};
+class Special {};
+startWithVocal[] = {hour};
+startWithConsonant[] = {europe,university};

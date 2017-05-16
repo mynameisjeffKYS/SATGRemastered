@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="">
+<Package name="">
+  <Container name="actors">
+   <Key ID="STR_ACTOR_A_NAME">
+    <Original>БАЗА</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_1">
+    <Original>Вы в Черноруссии. Высота – четыре километра.</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_2">
+    <Original>Вам необходимо захватить военную базу «Лопатино» и «Красностав».</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_3">
+    <Original>Из-за парашюта ваши патроны ограничены, используйте их с умом.</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_4">
+    <Original>За бортом - снежная буря. Видимость 800 метров.</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_5">
+    <Original>Главное – не паникуйте когда выпрыгните.</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_6">
+    <Original>Приготовтесь. Пять. Четыре. Три. Два. Один. Пошли!</Original>
+   </Key>
+   <Key ID="STR_ACTOR_A_7">
+    <Original>Вы пережили падение? Точка эвакуации к юго-востоку от вас.</Original>
+   </Key>
+   <Key ID="STR_ACTOR_B_NAME">
+    <Original>Пилот</Original>
+   </Key>
+   <Key ID="STR_ACTOR_B_1">
+    <Original>Проснитесь. Мы у цели. Штаб на связи.</Original>
+   </Key>
+  </Container>
+  
+  <Container name="SITREP">
+   <Key ID="SITREP_A">
+    <Original>ЧЕРНОРУСЬ</Original>
+   </Key>
+   <Key ID="SITREP_B">
+    <Original>1000 метров над уровнем моря</Original>
+   </Key>
+   <Key ID="SITREP_C">
+    <Original>Минута до цели</Original>
+   </Key>
+   <Key ID="SITREP_D">
+    <Original>01/09/2016 1715</Original>
+   </Key>
+  </Container>
+</Package>
+</Project>
