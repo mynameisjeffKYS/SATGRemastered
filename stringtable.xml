@@ -1,52 +1,65 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project name="">
-<Package name="">
-  <Container name="actors">
-   <Key ID="STR_ACTOR_A_NAME">
-    <Original>BASE</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_1">
-    <Original>You're in Chernarus. The height is 4 km.</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_2">
-    <Original>You have to take the military bases of “Lopatino” and “Krasnostav”.</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_3">
-    <Original>Your ammo is limited due to parachute so make good use of it.</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_4">
-    <Original>It's snowstorming outside. Visibility is 800 m.</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_5">
-    <Original>Above all, don't panic when jump out.</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_6">
-    <Original>Get ready. Five. Four. Three. Two. One. Go!</Original>
-   </Key>
-   <Key ID="STR_ACTOR_A_7">
-    <Original>Did you survive the fall? There's the extraction point southeast of you.</Original>
-   </Key>
-   <Key ID="STR_ACTOR_B_NAME">
-    <Original>Pilot</Original>
-   </Key>
-   <Key ID="STR_ACTOR_B_1">
-    <Original>Wake up Neo!</Original>
-   </Key>
-  </Container>
-  
-  <Container name="SITREP">
-   <Key ID="SITREP_A">
-    <Original>CHERNARUS</Original>
-   </Key>
-   <Key ID="SITREP_B">
-    <Original>1000 m above sea level.</Original>
-   </Key>
-   <Key ID="SITREP_C">
-    <Original>One minute to target</Original>
-   </Key>
-   <Key ID="SITREP_D">
-    <Original>01/09/2016 1715</Original>
-   </Key>
-  </Container>
-</Package>
+  <Package name="">
+    <Container name="actors">
+      <Key ID="STR_ACTOR_A_NAME">
+        <Original>BASE</Original>
+        <Russian>БАЗА</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_1">
+        <Original>You're in Chernarus. The altitude is 4 km.</Original>
+        <Russian>Вы в Черноруссии. Высота – четыре километра.</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_2">
+        <Original>You have to capture the military base “Lopatino” and “Krasnostav”.</Original>
+        <Russian>Вам необходимо захватить военную базу «Лопатино» и «Красностав».</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_3">
+        <Original>Your ammo is limited due to parachute so make good use of it.</Original>
+        <Russian>Из-за парашюта ваши патроны ограничены, используйте их с умом.</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_4">
+        <Original>It's snowstorming outside. Visibility is 800 m.</Original>
+        <Russian>За бортом - снежная буря. Видимость 800 метров.</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_5">
+        <Original>Above all, don't panic when jump out.</Original>
+        <Russian>Главное – не паникуйте когда выпрыгните.</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_6">
+        <Original>Get ready. Five. Four. Three. Two. One. Go!</Original>
+        <Russian>Приготовтесь. Пять. Четыре. Три. Два. Один. Пошли!</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_A_7">
+        <Original>Did you survive the fall? There's the extraction point southeast of you.</Original>
+        <Russian>Вы пережили падение? Точка эвакуации к юго-востоку от вас.</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_B_NAME">
+        <Original>Pilot</Original>
+        <Russian>Пилот</Russian>
+      </Key>
+      <Key ID="STR_ACTOR_B_1">
+        <Original>Wake up Neo!</Original>
+        <Russian>Проснитесь. Мы у цели. Штаб на связи.</Russian>
+      </Key>
+    </Container>
+    
+    <Container name="SITREP">
+      <Key ID="SITREP_A">
+        <Original>CHERNARUS</Original>
+        <Russian>ЧЕРНОРУСЬ</Russian>
+      </Key>
+      <Key ID="SITREP_B">
+        <Original>1000 m above sea level.</Original>
+        <Russian>1000 метров над уровнем моря</Russian>
+      </Key>
+      <Key ID="SITREP_C">
+        <Original>One minute to target</Original>
+        <Russian>Минута до цели</Russian>
+      </Key>
+      <Key ID="SITREP_D">
+        <Original>01/09/2016 1715</Original>
+      </Key>
+    </Container>
+  </Package>
 </Project>
