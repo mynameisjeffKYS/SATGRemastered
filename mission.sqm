@@ -19,7 +19,7 @@ class EditorData
 		pos[]={-2153.9741,1793.1241,9010.4131};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -296,10 +296,18 @@ class AddonsMetaData
 		};
 	};
 };
+class DynamicSimulation
+{
+	class EnableRadiuseCoefs
+	{
+		IsMoving=1.5;
+	};
+};
 randomSeed=3504677;
 class ScenarioData
 {
 	author="LumaEmu";
+	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
 {
@@ -375,7 +383,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=80;
+		items=79;
 		class Item0
 		{
 			dataType="Marker";
@@ -758,6 +766,25 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -775,7 +802,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="ace_isSurrendered";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
@@ -794,7 +821,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=3;
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -4230,7 +4257,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9503.7354,162.05307,3185.5779};
-				angles[]={6.2511988,0,6.0793877};
+				angles[]={6.251193,0,6.0793829};
 			};
 			id=167;
 			type="SupportRequester";
@@ -4270,7 +4297,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="base";
 						};
 					};
 				};
@@ -4630,6 +4657,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -4790,6 +4818,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -4913,6 +4942,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -5073,6 +5103,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -5215,13 +5246,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4785.0264,344.00171,10179.67};
+						position[]={4785.0259,344.00143,10179.67};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -5286,29 +5318,10 @@ class Mission
 					};
 					id=356;
 					type="rhs_msv_machinegunner";
-					atlOffset=5.0002747;
+					atlOffset=5;
 					class CustomAttributes
 					{
 						class Attribute0
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
 						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
@@ -5327,7 +5340,83 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male01RUS";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 				class Item5
@@ -5342,6 +5431,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -5473,6 +5563,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -5622,6 +5713,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=359;
 					type="rhs_msv_rifleman";
@@ -5681,6 +5773,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=360;
 					type="rhs_msv_rifleman";
@@ -5740,6 +5833,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=361;
 					type="rhs_msv_medic";
@@ -5799,6 +5893,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -5959,6 +6054,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -6082,6 +6178,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -6242,6 +6339,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -6391,6 +6489,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -6511,6 +6610,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -6642,6 +6742,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -6791,6 +6892,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=370;
 					type="rhs_msv_rifleman";
@@ -6850,6 +6952,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=371;
 					type="rhs_msv_rifleman";
@@ -6909,6 +7012,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=372;
 					type="rhs_msv_medic";
@@ -6968,6 +7072,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7128,6 +7233,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7251,6 +7357,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7411,6 +7518,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7560,6 +7668,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7680,6 +7789,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7811,6 +7921,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -7960,6 +8071,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=381;
 					type="rhs_msv_rifleman";
@@ -8019,6 +8131,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=382;
 					type="rhs_msv_rifleman";
@@ -8078,6 +8191,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=383;
 					type="rhs_msv_medic";
@@ -8137,6 +8251,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -8297,6 +8412,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -8420,6 +8536,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -8580,6 +8697,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -8729,6 +8847,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -8849,6 +8968,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -8980,6 +9100,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -9129,6 +9250,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=392;
 					type="rhs_msv_rifleman";
@@ -9188,6 +9310,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=393;
 					type="rhs_msv_rifleman";
@@ -9247,6 +9370,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=394;
 					type="rhs_msv_medic";
@@ -9306,6 +9430,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -9466,6 +9591,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -9589,6 +9715,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -9749,6 +9876,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -9898,6 +10026,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -10018,6 +10147,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -10149,6 +10279,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -10298,6 +10429,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=403;
 					type="rhs_msv_rifleman";
@@ -10357,6 +10489,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=404;
 					type="rhs_msv_rifleman";
@@ -10416,6 +10549,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=405;
 					type="rhs_msv_medic";
@@ -10601,6 +10735,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -10718,6 +10853,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -10798,6 +10934,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -10915,6 +11052,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11021,6 +11159,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11099,6 +11238,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11188,6 +11328,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11295,6 +11436,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=456;
 					type="rhs_msv_rifleman";
@@ -11312,6 +11454,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=457;
 					type="rhs_msv_rifleman";
@@ -11329,6 +11472,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=458;
 					type="rhs_msv_medic";
@@ -11346,6 +11490,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11463,6 +11608,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11544,6 +11690,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11662,6 +11809,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11768,6 +11916,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11845,6 +11994,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11933,6 +12083,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12039,6 +12190,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=467;
 					type="rhs_msv_rifleman";
@@ -12055,6 +12207,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=468;
 					type="rhs_msv_rifleman";
@@ -12071,6 +12224,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=469;
 					type="rhs_msv_medic";
@@ -12087,6 +12241,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12205,6 +12360,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12285,6 +12441,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12403,6 +12560,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12510,6 +12668,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12588,6 +12747,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12676,6 +12836,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -12782,6 +12943,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=478;
 					type="rhs_msv_rifleman";
@@ -12798,6 +12960,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=479;
 					type="rhs_msv_rifleman";
@@ -12814,6 +12977,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=480;
 					type="rhs_msv_medic";
@@ -12953,6 +13117,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13112,6 +13277,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13234,6 +13400,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13393,6 +13560,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13542,6 +13710,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13662,6 +13831,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13793,6 +13963,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -13942,6 +14113,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=490;
 					type="rhs_msv_rifleman";
@@ -14001,6 +14173,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=491;
 					type="rhs_msv_rifleman";
@@ -14060,6 +14233,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=492;
 					type="rhs_msv_medic";
@@ -14119,6 +14293,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -14279,6 +14454,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -14402,6 +14578,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -14562,6 +14739,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -14711,6 +14889,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -14831,6 +15010,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -14962,6 +15142,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -15111,6 +15292,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=501;
 					type="rhs_msv_rifleman";
@@ -15170,6 +15352,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=502;
 					type="rhs_msv_rifleman";
@@ -15229,6 +15412,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						ignoreByDynSimulGrid=1;
 					};
 					id=503;
 					type="rhs_msv_medic";
@@ -15412,6 +15596,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -15483,8 +15668,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -15496,7 +15681,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male01RUS";
 								};
 							};
 						};
@@ -15519,7 +15704,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -15549,6 +15753,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -15620,8 +15825,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -15633,7 +15838,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male01RUS";
 								};
 							};
 						};
@@ -15656,7 +15861,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -15686,6 +15910,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -15757,6 +15982,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male01RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -15774,7 +16018,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -15804,6 +16048,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -15875,6 +16120,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male02RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -15892,7 +16156,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -15922,6 +16186,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -15993,6 +16258,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male01RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -16010,7 +16294,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -16040,6 +16324,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16111,6 +16396,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male03RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -16128,7 +16432,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -16158,6 +16462,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16229,8 +16534,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -16242,7 +16547,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male02RUS";
 								};
 							};
 						};
@@ -16265,7 +16570,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -16295,6 +16619,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16366,8 +16691,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -16379,7 +16704,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male05RUS";
 								};
 							};
 						};
@@ -16402,7 +16727,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -16432,6 +16776,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16503,6 +16848,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male01RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -16520,7 +16884,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -16550,6 +16914,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16621,6 +16986,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male03RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -16638,7 +17022,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -16668,6 +17052,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16739,8 +17124,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -16752,7 +17137,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male03RUS";
 								};
 							};
 						};
@@ -16775,7 +17160,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -16805,6 +17209,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16876,6 +17281,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male04RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -16893,7 +17317,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -16923,6 +17347,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -16994,8 +17419,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -17007,7 +17432,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male02RUS";
 								};
 							};
 						};
@@ -17030,7 +17455,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -17060,6 +17504,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -17131,8 +17576,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -17144,7 +17589,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male05RUS";
 								};
 							};
 						};
@@ -17167,7 +17612,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -17197,6 +17661,7 @@ class Mission
 					flags=3;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -17268,6 +17733,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male02RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -17285,7 +17769,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -17315,6 +17799,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -17386,8 +17871,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -17399,7 +17884,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male02RUS";
 								};
 							};
 						};
@@ -17422,7 +17907,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -17452,6 +17956,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -17523,8 +18028,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -17536,7 +18041,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male04RUS";
 								};
 							};
 						};
@@ -17559,7 +18064,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -17589,6 +18113,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -17660,6 +18185,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male04RUS";
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="pitch";
 							expression="_this setpitch _value;";
 							class Value
@@ -17677,7 +18221,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						nAttributes=2;
 					};
 				};
 			};
@@ -17707,6 +18251,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -17778,8 +18323,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -17791,7 +18336,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="";
+									value="RHS_Male01RUS";
 								};
 							};
 						};
@@ -17814,7 +18359,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -18764,6 +19328,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -18946,6 +19511,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -19147,6 +19713,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -19353,6 +19920,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -19557,6 +20125,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -19757,6 +20326,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -19958,6 +20528,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -20243,1504 +20814,6 @@ class Mission
 		};
 		class Item71
 		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=7;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					flags=2;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_hk416d10_m320";
-								optics="rhsusf_acc_SpecterDR";
-								muzzle="rhsusf_acc_nt4_black";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="lerca_1200_black";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=2;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-										count=9;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							gps="ItemGPS";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
-						};
-					};
-					id=584;
-					type="B_Soldier_SL_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=3;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_hk416d10";
-								optics="rhsusf_acc_SpecterDR";
-								muzzle="rhsusf_acc_nt4_black";
-								underBarrel="rhsusf_acc_harris_bipod";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="Binocular";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=9;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
-						};
-					};
-					id=585;
-					type="B_Soldier_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_hk416d10";
-								optics="rhsusf_acc_SpecterDR";
-								muzzle="rhsusf_acc_nt4_black";
-								underBarrel="rhsusf_acc_harris_bipod";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="Binocular";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=4;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=30;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=10;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=10;
-									};
-									class Item3
-									{
-										name="ACE_bloodIV";
-										count=7;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
-						};
-					};
-					id=586;
-					type="B_medic_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m24sws_blk";
-								optics="rhsusf_acc_LEUPOLDMK4_2";
-								class primaryMuzzleMag
-								{
-									name="rhsusf_5Rnd_762x51_m118_special_Mag";
-									ammoLeft=5;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="ACE_VectorDay";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=4;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_ATragMX";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_Kestrel4500";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhsusf_5Rnd_762x51_m118_special_Mag";
-										count=24;
-										ammoLeft=5;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							gps="ItemGPS";
-							hmd="NVGoggles";
-							headgear="TRYK_H_Helmet_Winter_2";
-						};
-					};
-					id=587;
-					type="B_sniper_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m240B";
-								optics="rhsusf_acc_SpecterDR";
-								class primaryMuzzleMag
-								{
-									name="rhsusf_50Rnd_762x51";
-									ammoLeft=50;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="Binocular";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhsusf_50Rnd_762x51";
-										count=3;
-										ammoLeft=50;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							goggles="TRYK_kio_balaclava_BLK";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
-						};
-					};
-					id=588;
-					type="B_soldier_AR_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_hk416d10";
-								optics="rhsusf_acc_SpecterDR";
-								muzzle="rhsusf_acc_nt4_black";
-								underBarrel="rhsusf_acc_harris_bipod";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="Binocular";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=9;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
-						};
-					};
-					id=589;
-					type="B_Soldier_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.05;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="CORPORAL";
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_hk416d10";
-								optics="rhsusf_acc_SpecterDR";
-								muzzle="rhsusf_acc_nt4_black";
-								underBarrel="rhsusf_acc_harris_bipod";
-								class primaryMuzzleMag
-								{
-									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-									ammoLeft=30;
-								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
-							class binocular
-							{
-								name="Binocular";
-							};
-							class uniform
-							{
-								typeName="TRYK_U_B_PCUHsW4";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="TRYK_V_PlateCarrier_blk";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=9;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="B_Parachute";
-								isBackpack=1;
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="tf_microdagr";
-							radio="ItemRadio";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
-						};
-					};
-					id=590;
-					type="B_Soldier_F";
-					atlOffset=1507.7159;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=-1;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=7;
-				};
-				class Links
-				{
-					items=7;
-					class Item0
-					{
-						linkID=0;
-						item0=584;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=14;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=585;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=15;
-						};
-					};
-					class Item2
-					{
-						linkID=2;
-						item0=586;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=16;
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=587;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=17;
-						};
-					};
-					class Item4
-					{
-						linkID=4;
-						item0=588;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=18;
-						};
-					};
-					class Item5
-					{
-						linkID=5;
-						item0=589;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=19;
-						};
-					};
-					class Item6
-					{
-						linkID=6;
-						item0=590;
-						item1=621;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=20;
-						};
-					};
-				};
-			};
-			id=583;
-			atlOffset=1507.7158;
-		};
-		class Item72
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -21750,7 +20823,7 @@ class Mission
 			id=599;
 			type="HighCommand";
 		};
-		class Item73
+		class Item72
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -21762,7 +20835,7 @@ class Mission
 			type="HighCommandSubordinate";
 			atlOffset=0.00010681152;
 		};
-		class Item74
+		class Item73
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -21774,7 +20847,7 @@ class Mission
 			type="HighCommandSubordinate";
 			atlOffset=0.00010681152;
 		};
-		class Item75
+		class Item74
 		{
 			dataType="Group";
 			side="West";
@@ -21793,12 +20866,32 @@ class Mission
 					class Attributes
 					{
 						name="base";
+						ignoreByDynSimulGrid=1;
 					};
 					id=614;
 					type="B_RangeMaster_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -21817,7 +20910,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="BASE";
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -21828,7 +20940,7 @@ class Mission
 			};
 			id=613;
 		};
-		class Item76
+		class Item75
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -22109,7 +21221,7 @@ class Mission
 				nAttributes=14;
 			};
 		};
-		class Item77
+		class Item76
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -22180,7 +21292,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item78
+		class Item77
 		{
 			dataType="Group";
 			side="West";
@@ -22200,6 +21312,7 @@ class Mission
 					class Attributes
 					{
 						name="planeD";
+						ignoreByDynSimulGrid=1;
 					};
 					id=622;
 					type="rhsusf_airforce_pilot";
@@ -22216,6 +21329,7 @@ class Mission
 					side="West";
 					class Attributes
 					{
+						ignoreByDynSimulGrid=1;
 					};
 					id=623;
 					type="rhsusf_airforce_pilot";
@@ -22225,7 +21339,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					position[]={5532.1362,323.84448,8677.6211};
-					completitionRadius=25;
+					completitionRadius=50;
 					class Effects
 					{
 					};
@@ -22287,7 +21401,7 @@ class Mission
 			id=620;
 			atlOffset=1507.7158;
 		};
-		class Item79
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -22299,7 +21413,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
-				init="this flyInHeight 1500;";
+				init="call{this flyInHeight 1500;}";
 				name="plane";
 			};
 			id=621;
@@ -22334,11 +21448,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=26;
+			nextID=25;
 		};
 		class Links
 		{
-			items=26;
+			items=25;
 			class Item0
 			{
 				linkID=0;
@@ -22572,8 +21686,8 @@ class Mission
 			class Item23
 			{
 				linkID=23;
-				item0=584;
-				item1=601;
+				item0=601;
+				item1=599;
 				class CustomData
 				{
 					type="Sync";
@@ -22582,16 +21696,6 @@ class Mission
 			class Item24
 			{
 				linkID=24;
-				item0=601;
-				item1=599;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item25
-			{
-				linkID=25;
 				item0=600;
 				item1=599;
 				class CustomData

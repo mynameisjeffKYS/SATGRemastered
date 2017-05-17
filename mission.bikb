@@ -4,36 +4,42 @@
 	{
 		text = $STR_ACTOR_A_1;
 		speech[] = {"\voice\actor_a_1.ogg"};
+		duration = 3;
 		class Arguments{};
 	};
 	class actor_a_2
 	{
 		text = $STR_ACTOR_A_2;
 		speech[] = {"\voice\actor_a_2.ogg"};
+		duration = 4;
 		class Arguments{};
 	};
 	class actor_a_3
 	{
 		text = $STR_ACTOR_A_3;
 		speech[] = {"\voice\actor_a_3.ogg"};
+		duration = 5;
 		class Arguments{};
 	};
 	class actor_a_4
 	{
 		text = $STR_ACTOR_A_4;
 		speech[] = {"\voice\actor_a_4.ogg"};
+		duration = 4;
 		class Arguments{};
 	};
 	class actor_a_5
 	{
 		text = $STR_ACTOR_A_5;
 		speech[] = {"\voice\actor_a_5.ogg"};
+		duration = 3;
 		class Arguments{};
 	};
 	class actor_a_6
 	{
 		text = $STR_ACTOR_A_6;
 		speech[] = {"\voice\actor_a_6.ogg"};
+		duration = 7;
 		class Arguments{};
 	};
 };

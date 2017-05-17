@@ -1,4 +1,6 @@
-﻿class CfgRadio
+﻿#include "functions.cpp"
+
+class CfgRadio
 {
 	class actor_a_1
 	{
@@ -302,7 +304,9 @@ class Header
         gameType = Coop;
 };
 
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 author = "KoBRaAndrey";
 OnLoadName = "Storm At The Gates";
 //loadScreen = "thumb.jpg";
+
+#include "mission.bikb"
