@@ -42,6 +42,13 @@
 		duration = 7;
 		class Arguments{};
 	};
+	class actor_a_7
+	{
+		text = $STR_ACTOR_A_7;
+		speech[] = {"\voice\actor_a_7.ogg"};
+		duration = 5;
+		class Arguments{};
+	};
 };
 
 class Arguments {};

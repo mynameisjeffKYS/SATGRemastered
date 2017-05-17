@@ -3,7 +3,7 @@
 
 private ["_mov_obj","_rotocoale"];
 
-if (!hasInterface) exitWith {};
+if (true) exitWith {};
 
 //_name_terr = worldName;
 

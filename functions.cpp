@@ -1,6 +1,6 @@
 class CfgFunctions
 {
-	class DynamicMusic
+	class dynamicMusic
 	{
 		class dynamicMusic
 		{
@@ -12,11 +12,19 @@ class CfgFunctions
 		};
 	};	
 
-	class kb
+	class main
 	{
-		class Main
+		class main
 		{		
-			class tell {};
+			class kbTell {};
+			class winterOutfit {postInit = 1;};
+			class blindAI {postInit = 1;};
+			class HALO {};
+			class unconscious {};
+			class scoreIncrease {};
+			class scoreInit {postInit = 1;};
+			class supply {};
+			class takeGPS {postInit = 1;};
 		};
 	};
 };

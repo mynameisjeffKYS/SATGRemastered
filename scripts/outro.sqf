@@ -1,9 +1,8 @@
-//playMusic "EventTrack02_F_EPA";
-playMusic "dynamic0";
+playMusic "outro";
 0 fadeMusic 1.5;
-Sleep 33;
+sleep 33;
 cutText ["", "BLACK"];
-Sleep 2;
+sleep 2;
 
 _i = 0;
 {
@@ -18,7 +17,7 @@ _i = 0;
 		cutText [_s, "BLACK FADED"];
 		Sleep 4;
 		_i = _i + 1;
-} foreach start_squad;
+} forEach startSquad;
 
 cutText ["", "BLACK FADED"];
 "END1" call BIS_fnc_endMission;

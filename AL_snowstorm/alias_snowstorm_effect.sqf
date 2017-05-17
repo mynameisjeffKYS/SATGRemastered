@@ -47,15 +47,17 @@ while {al_snowstorm_om} do {
 	_fulg_nea setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal.p3d", 16, 12, 8], "", "Billboard", 1, 6, [0, 0, 6], [vity,vitx, -1], 3, 1.6, 1, 0.1, [0.09], [[1, 1, 1, 1]], [0.08], 1, 0, "", "", vehicle player];	
 	_fulg_nea setDropInterval fulg_p_drop;
 	
+	/*
 	_alias_local_fog = "#particlesource" createVehicleLocal (getpos vehicle player);
 	if (vehicle player != player) then {_alias_local_fog attachto [vehicle player];} else {_alias_local_fog attachto [player];};
 	_alias_local_fog setParticleCircle [30, [3, 3, 0]];
 	_alias_local_fog setParticleRandom [10, [0.25, 0.25, 0], [1, 1, 0], 1, 1, [0, 0, 0, 0.1], 0, 0];
 	_alias_local_fog setParticleParams [["\A3\data_f\cl_basic", 1, 0, 1], "", "Billboard", 1, 12, [0, 0, 0], [-1, -1, 0], 110, 10.15, 7.9, 0.01, [10, 10, 20], [[1, 1, 1, 0.01], [1, 1, 1, 0.05+random 0.05], [1, 1, 1, 0]], [0.08], 1, 0, "", "", vehicle player];	
 	_alias_local_fog setDropInterval alias_drop_fog_factor;
-	
+	*/
+
 	waitUntil {finishRotocol or !al_snowstorm_om};
-	deletevehicle _alias_local_fog;
+	// deletevehicle _alias_local_fog;
 	deletevehicle _fulg_nea; 
 	};
 	

@@ -12,7 +12,7 @@
 			localize "SITREP_D"
 		] spawn BIS_fnc_EXP_camp_SITREP;
 		waitUntil{sleep 0.5; vehicle player == player};
-		
+
 		0 fadeSound 0.7;
 		0 fadeMusic 0;
 		waitUntil{sleep 0.5; speed player == 0};
@@ -26,22 +26,26 @@
 [] spawn {
 	if (isServer) then {
 		waitUntil{sleep 0.5; time > 10};
-		_playerGroup = group (allPlayers select 0);
+		_playerGroup = allPlayers select 0;
 		
 		base kbAddTopic ["intro", "mission.bikb"];
-		[base, _playerGroup, "intro", "actor_a_1"] call kb_fnc_tell;
-		[base, _playerGroup, "intro", "actor_a_2"] call kb_fnc_tell;
-		[base, _playerGroup, "intro", "actor_a_3"] call kb_fnc_tell;
-		[base, _playerGroup, "intro", "actor_a_4"] call kb_fnc_tell;
-		[base, _playerGroup, "intro", "actor_a_5"] call kb_fnc_tell;
+		[base, _playerGroup, "intro", "actor_a_1"] call main_fnc_kbTell;
+		[base, _playerGroup, "intro", "actor_a_2"] call main_fnc_kbTell;
+		[base, _playerGroup, "intro", "actor_a_3"] call main_fnc_kbTell;
+		[base, _playerGroup, "intro", "actor_a_4"] call main_fnc_kbTell;
+		[base, _playerGroup, "intro", "actor_a_5"] call main_fnc_kbTell;
 		
 		waitUntil{sleep 0.5; plane distance2D getMarkerPos "mBuild" < 2000};
 
-		[base, _playerGroup, "intro", "actor_a_6"] spawn kb_fnc_tell;
+		[base, _playerGroup, "intro", "actor_a_6"] spawn main_fnc_kbTell;
 		sleep 6;
 		{
-			_x spawn FNC_HALO_AI;
+			_x spawn main_fnc_HALO;
 		} forEach ((crew plane - [driver plane]) select {not isPlayer _x});
+
+		startSquad = units group (allPlayers select 0);
+		{_x setVariable ["name", name _x]} forEach startSquad;
+
 		sleep 60;
 		
 		{deleteVehicle _x} forEach crew plane; 

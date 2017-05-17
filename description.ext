@@ -6,7 +6,6 @@ class CfgRadio
 	{
 		sound[] = {"\voice\actor_a_1.ogg", db, 1.0}; 
 		title = "";
-		// $STR_ACTOR_A_1
 	};
 
 	class actor_a_2
@@ -72,6 +71,10 @@ class CfgMusic
 	{
 		sound[] = {"\music\outro.ogg", db, 1.0};
 	};	
+	class crash
+	{
+		sound[] = {"\music\crash.ogg", db, 1.0};
+	};
 	
 	class dynamic0
 	{
@@ -297,11 +300,6 @@ class CfgSounds
 		sound[] = {"\sound\tuse_6.ogg", 1, 1};
 		titles[] = {1, ""};
 	};	
-};
-
-class Header
-{
-        gameType = Coop;
 };
 
 enableDebugConsole = 1;
