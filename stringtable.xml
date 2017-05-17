@@ -1,48 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Project name="">
 <Package name="">
   <Container name="actors">
    <Key ID="STR_ACTOR_A_NAME">
-    <Original>БАЗА</Original>
+    <Original>BASE</Original>
    </Key>
    <Key ID="STR_ACTOR_A_1">
-    <Original>Вы в Черноруссии. Высота – четыре километра.</Original>
+    <Original>You're in Chernarus. The height is 4 km.</Original>
    </Key>
    <Key ID="STR_ACTOR_A_2">
-    <Original>Вам необходимо захватить военную базу «Лопатино» и «Красностав».</Original>
+    <Original>You have to take the military bases of “Lopatino” and “Krasnostav”.</Original>
    </Key>
    <Key ID="STR_ACTOR_A_3">
-    <Original>Из-за парашюта ваши патроны ограничены, используйте их с умом.</Original>
+    <Original>Your ammo is limited due to parachute so make good use of it.</Original>
    </Key>
    <Key ID="STR_ACTOR_A_4">
-    <Original>За бортом - снежная буря. Видимость 800 метров.</Original>
+    <Original>It's snowstorming outside. Visibility is 800 m.</Original>
    </Key>
    <Key ID="STR_ACTOR_A_5">
-    <Original>Главное – не паникуйте когда выпрыгните.</Original>
+    <Original>Above all, don't panic when jump out.</Original>
    </Key>
    <Key ID="STR_ACTOR_A_6">
-    <Original>Приготовтесь. Пять. Четыре. Три. Два. Один. Пошли!</Original>
+    <Original>Get ready. Five. Four. Three. Two. One. Go!</Original>
    </Key>
    <Key ID="STR_ACTOR_A_7">
-    <Original>Вы пережили падение? Точка эвакуации к юго-востоку от вас.</Original>
+    <Original>Did you survive the fall? There's the extraction point southeast of you.</Original>
    </Key>
    <Key ID="STR_ACTOR_B_NAME">
-    <Original>Пилот</Original>
+    <Original>Pilot</Original>
    </Key>
    <Key ID="STR_ACTOR_B_1">
-    <Original>Проснитесь. Мы у цели. Штаб на связи.</Original>
+    <Original>Wake up Neo!</Original>
    </Key>
   </Container>
   
   <Container name="SITREP">
    <Key ID="SITREP_A">
-    <Original>ЧЕРНОРУСЬ</Original>
+    <Original>CHERNARUS</Original>
    </Key>
    <Key ID="SITREP_B">
-    <Original>1000 метров над уровнем моря</Original>
+    <Original>1000 m above sea level.</Original>
    </Key>
    <Key ID="SITREP_C">
-    <Original>Минута до цели</Original>
+    <Original>One minute to target</Original>
    </Key>
    <Key ID="SITREP_D">
     <Original>01/09/2016 1715</Original>
