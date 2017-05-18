@@ -4,7 +4,7 @@
       <Container name="actors">
         <Key ID="STR_ACTOR_A_NAME">
           <Original>BASE</Original>
-          <Russian>БАЗА</Russian>
+          <Russian>БАЗА1</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_1">
           <Original>You're in Chernarus. The altitude is 1.5 km.</Original>
