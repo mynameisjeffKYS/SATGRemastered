@@ -46,7 +46,7 @@
 		startSquad = units group (allPlayers select 0);
 		{_x setVariable ["name", name _x]} forEach startSquad;
 
-		sleep 60;
+		sleep 30;
 		
 		{deleteVehicle _x} forEach crew plane; 
 		deleteVehicle plane;	

@@ -7,8 +7,8 @@
           <Russian>БАЗА</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_1">
-          <Original>You're in Chernarus. The altitude is 4 km.</Original>
-          <Russian>Вы в Черноруссии. Высота – четыре километра.</Russian>
+          <Original>You're in Chernarus. The altitude is 1.5 km.</Original>
+          <Russian>Вы в Черноруссии. Высота – полтора километра.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_2">
           <Original>You have to capture the military base “Lopatino” and “Krasnostav”.</Original>
@@ -19,8 +19,8 @@
           <Russian>Из-за парашюта ваши патроны ограничены, используйте их с умом.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_4">
-          <Original>It's snowstorming outside. Visibility is 800 m.</Original>
-          <Russian>За бортом - снежная буря. Видимость 800 метров.</Russian>
+          <Original>It's snowstorming outside. Visibility is 400 m.</Original>
+          <Russian>За бортом - снежная буря. Видимость 400 метров.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_5">
           <Original>Above all, don't panic when jump out.</Original>
@@ -34,14 +34,6 @@
           <Original>Did you survive the fall? There's the extraction point southeast of you.</Original>
           <Russian>Вы пережили падение? Точка эвакуации к юго-востоку от вас.</Russian>
         </Key>
-        <Key ID="STR_ACTOR_B_NAME">
-          <Original>Pilot</Original>
-          <Russian>Пилот</Russian>
-        </Key>
-        <Key ID="STR_ACTOR_B_1">
-          <Original>Wake up Neo!</Original>
-          <Russian>Проснитесь. Мы у цели. Штаб на связи.</Russian>
-        </Key>
       </Container>
       
       <Container name="SITREP">
@@ -50,8 +42,8 @@
           <Russian>ЧЕРНОРУСЬ</Russian>
         </Key>
         <Key ID="SITREP_B">
-          <Original>1000 m above sea level.</Original>
-          <Russian>1000 метров над уровнем моря</Russian>
+          <Original>1500 m above sea level.</Original>
+          <Russian>1500 метров над уровнем моря</Russian>
         </Key>
         <Key ID="SITREP_C">
           <Original>One minute to target</Original>
@@ -61,5 +53,67 @@
           <Original>01/09/2016 1715</Original>
         </Key>
       </Container>
+
+      <Container name="MARKER">
+        <Key ID="MARKER_Boat">
+          <Original>Extraction point</Original>
+          <Russian>Точка эвакуации</Russian>
+        </Key>
+        <Key ID="MARKER_Krasn">
+          <Original>Capture "Krasnostav"</Original>
+          <Russian>Захватите "Красностав"</Russian>
+        </Key>
+        <Key ID="MARKER_Lop">
+          <Original>Capture "Lopatino"</Original>
+          <Russian>Захватите "Лопатино"</Russian>
+        </Key>
+        <Key ID="MARKER_Build">
+          <Original>Regroup position</Original>
+          <Russian>Точка сбора</Russian>
+        </Key>
+      </Container>
+
+      <Container name="TASK">
+        <Key ID="STR_TASK_Boat">
+          <Original>MOVE TO EXTRACTION</Original>
+          <Russian>ДОБЕРИТЕСЬ ЭВАКУАЦИИ</Russian>
+        </Key>
+        <Key ID="STR_TASK_Lop">
+          <Original>CAPTURE LOPATINO</Original>
+          <Russian>ЗАХВАТИТЕ ЛОПАТИНО</Russian>
+        </Key>
+        <Key ID="STR_TASK_Krasn">
+          <Original>CAPTURE KRASNOSTAV</Original>
+          <Russian>ЗАХВАТИТЕ КРАСНОСТАВ</Russian>
+        </Key>
+        <Key ID="STR_TASK_Leave">
+          <Original>LEAVE CHERNORUS</Original>
+          <Russian>ПОКИНЬТЕ ЧЕРНОРУССИЮ</Russian>
+        </Key>
+        <Key ID="STR_TASK_Regroup">
+          <Original>Regroup position</Original>
+          <Russian>ПЕРЕГРУППИРУЙТЕСЬ</Russian>
+        </Key>
+      </Container>
+
+      <Container name="AWARD">
+        <Key ID="AWARD_Silver">
+          <Original>Was awarded a medal 'Silver Star'</Original>
+          <Russian>Награжден медалью 'Серебряная Звезда'.</Russian>
+        </Key>
+        <Key ID="AWARD_Robust">
+          <Original>Was awarded a medal 'Service Cross'</Original>
+          <Russian>Награжден крестом 'За выдающиеся заслуги'</Russian>
+        </Key>
+        <Key ID="AWARD_Purple">
+          <Original>Was awarded the posthumous medal 'Purple Heart'</Original>
+          <Russian>Посмертно награжден медалью 'Пурпурное сердце'</Russian>
+        </Key>
+        <Key ID="AWARD_Kills">
+          <Original>%1 made %2 confirmed kills. \n %3</Original>
+          <Russian>%1 совершил %2 подтвержденных убийств. \n %3 </Russian>
+        </Key>
+      </Container>
+
     </Package>
   </Project>

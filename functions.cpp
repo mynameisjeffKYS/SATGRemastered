@@ -25,6 +25,7 @@ class CfgFunctions
 			class scoreInit {postInit = 1;};
 			class supply {};
 			class takeGPS {postInit = 1;};
+			class localApply {postInit = 1;};
 		};
 	};
 };

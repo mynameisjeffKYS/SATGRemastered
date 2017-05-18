@@ -1,5 +1,6 @@
 if (isServer) then {
-	setTimeMultiplier 0.1;	
+	setTimeMultiplier 0.1;
+	execFSM "missions.fsm";
 };
 
 if (hasInterface) then {

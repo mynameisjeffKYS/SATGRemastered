@@ -1,0 +1,200 @@
+/*%FSM<COMPILE "D:\Games\steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, stdin">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"INIT",0,250,115.996674,-321.591705,205.996674,-271.591705,0.000000,"INIT"};
+item1[] = {"not_server",4,218,21.166504,-244.086349,111.166496,-194.086349,1.000000,"not server"};
+item2[] = {"END",1,250,23.902008,-162.021759,113.902039,-112.021767,0.000000,"END"};
+item3[] = {"TRUE",8,218,171.618134,-239.527222,261.618134,-189.527222,0.000000,"TRUE"};
+item4[] = {"PRIMARY_TASK",2,250,173.441833,-167.492783,263.441864,-117.492798,0.000000,"PRIMARY" \n "TASK"};
+item5[] = {"LOP_CAPTURED",4,218,169.794495,-78.133606,259.794495,-28.133606,0.000000,"LOP" \n "CAPTURED"};
+item6[] = {"SUCCESS",2,250,173.441833,7.578278,263.441833,57.578278,0.000000,"SUCCESS"};
+item7[] = {"KRASN_CAPTURED",4,218,337.570831,-326.150909,427.570831,-276.150879,0.000000,"KRASN" \n "CAPTURED"};
+item8[] = {"CRASH__SCRIPT",2,250,343.041779,-237.703522,433.041809,-187.703537,0.000000,"CRASH " \n "SCRIPT"};
+item9[] = {"CRASHED",4,218,339.394501,-156.550812,429.394501,-106.550812,0.000000,"CRASHED"};
+item10[] = {"HAHAHA",2,250,342.130035,-69.927185,432.130066,-19.927185,0.000000,"HAHAHA"};
+item11[] = {"NEAR_BOAT",4,4314,340.306366,13.960999,430.306366,63.960999,0.000000,"NEAR" \n "BOAT"};
+item12[] = {"EHH",1,250,343.953644,96.025513,433.953674,146.025497,0.000000,"EHH"};
+link0[] = {0,1};
+link1[] = {0,3};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {7,8};
+link8[] = {8,9};
+link9[] = {9,10};
+link10[] = {10,11};
+link11[] = {11,12};
+globals[] = {0.000000,0,0,0,0,640,480,1,91,6316128,1,-141.138885,462.491302,361.367401,-403.656250,662,838,1};
+window[] = {2,-1,-1,-1,-1,855,130,1090,130,3,680};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "stdin";
+        class States
+        {
+                /*%FSM<STATE "INIT">*/
+                class INIT
+                {
+                        name = "INIT";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "not_server">*/
+                                class not_server
+                                {
+                                        itemno = 1;
+                                        priority = 1.000000;
+                                        to="END";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "TRUE">*/
+                                class TRUE
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="PRIMARY_TASK";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "END">*/
+                class END
+                {
+                        name = "END";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "PRIMARY_TASK">*/
+                class PRIMARY_TASK
+                {
+                        name = "PRIMARY_TASK";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"""taskCaptureKrasn"" call BIS_fnc_missionTasks;" \n
+                         """taskCaptureLop"" call BIS_fnc_missionTasks;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "LOP_CAPTURED">*/
+                                class LOP_CAPTURED
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="SUCCESS";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"({alive _x} count units groupLop) < 3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "SUCCESS">*/
+                class SUCCESS
+                {
+                        name = "SUCCESS";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"[""taskCaptureLop"", ""SUCCEEDED"", True] call BIS_FNC_taskSetState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "KRASN_CAPTURED">*/
+                                class KRASN_CAPTURED
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="CRASH__SCRIPT";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"({alive _x} count units groupKrasn) < 3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "CRASH__SCRIPT">*/
+                class CRASH__SCRIPT
+                {
+                        name = "CRASH__SCRIPT";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"[""taskCaptureKrasn"", ""SUCCEEDED"", True] call BIS_FNC_taskSetState;" \n
+                         """taskEscapeFake"" call BIS_fnc_missionTasks;" \n
+                         """scripts\crash.sqf"" remoteExec [""execVM""];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "CRASHED">*/
+                                class CRASHED
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="HAHAHA";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(missionNameSpace getVariable [""crashEnded"", False])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "HAHAHA">*/
+                class HAHAHA
+                {
+                        name = "HAHAHA";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"[""taskEscapeFake"", ""FAILED"", True] call BIS_FNC_taskSetState;" \n
+                         """taskBoat"" call BIS_fnc_missionTasks;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "NEAR_BOAT">*/
+                                class NEAR_BOAT
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="EHH";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"({side _x == WEST} count (getMarkerPos ""mBoat"" nearEntities [""Man"", 40]) > 0)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "EHH">*/
+                class EHH
+                {
+                        name = "EHH";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"[""taskBoat"", ""SUCCEEDED"", True] call BIS_FNC_taskSetState;" \n
+                         """taskEscape"" call BIS_fnc_missionTasks;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="INIT";
+        finalStates[] =
+        {
+                "END",
+                "EHH",
+        };
+};
+/*%FSM</COMPILE>*/

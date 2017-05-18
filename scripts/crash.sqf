@@ -16,7 +16,7 @@
 			_copter allowDamage False;
 		};
 
-		waitUntil{position _copter select 2 < 15};
+		waitUntil{position _copter select 2 < 20};
 
 		2 fadeMusic 0;
 		cutText ["", "BLACK FADED"];
@@ -60,6 +60,7 @@
 		player switchMove "AinjPpneMstpSnonWrflDnon_injuredHealed";
 		player setVariable ["tf_unable_to_use_radio", True];
 
+		0 fadeMusic 1;
 		playMusic "crash";
 		
 		_tosleep = time + (random 30 + 15);
@@ -69,7 +70,7 @@
 		player setVariable ["tf_unable_to_use_radio", False];
 		player switchMove "Acts_UnconsciousStandUp_part1";
 
-		["?????????","??????????","02/06/2016 1820"] spawn BIS_fnc_infoText;
+		// ["?????????","??????????","02/06/2016 1820"] spawn BIS_fnc_infoText;
 		sleep 3;
 		missionNameSpace setVariable ["crashEnded", True, True];
 	};

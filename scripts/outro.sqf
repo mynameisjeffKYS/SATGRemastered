@@ -9,11 +9,11 @@ _i = 0;
 		_name = _x getVariable "name";
 		_score = _x getVariable "kills";
 		_medal = "";
-		if (_score > 15) then {_medal = "Награжден медалью 'Серебряная Звезда'."};
-		if (_score > 20) then {_medal = "Награжден крестом 'За выдающиеся заслуги'"};
-		if (!alive _x) then {_medal = "Посмертно награжден медалью 'Пурпурное сердце'"};
+		if (_score > 15) then {_medal = localize "AWARD_Silver"};
+		if (_score > 20) then {_medal = localize "AWARD_Robust"};
+		if (!alive _x) then {_medal = localize "AWARD_Purple"};
 		
-		_s = format ["%1 совершил %2 подтвержденных убийств. \n %3 ", _name, _score, _medal];
+		_s = format [localize "AWARD_Kills", _name, _score, _medal];
 		cutText [_s, "BLACK FADED"];
 		Sleep 4;
 		_i = _i + 1;
