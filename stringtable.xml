@@ -7,7 +7,7 @@
           <Russian>БАЗА</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_1">
-          <Original>You're in Chernarus. Altitude is 1.5 km.</Original>
+          <Original>You're in Chernarus. Altitude is 1500 meters.</Original>
           <Russian>Вы в Черноруссии. Высота – полтора километра.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_2">
@@ -27,7 +27,7 @@
           <Russian>Главное – не паникуйте когда выпрыгните.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_6">
-          <Original>Countdown commencing. Five. Four. Three. Two. One. Jumg out!</Original>
+          <Original>Countdown commencing. Five. Four. Three. Two. One. Jump out!</Original>
           <Russian>Приготовтесь. Пять. Четыре. Три. Два. Один. Пошли!</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_7">
@@ -42,7 +42,7 @@
           <Russian>ЧЕРНОРУСЬ</Russian>
         </Key>
         <Key ID="SITREP_B">
-          <Original>1.5 klicks above sea level.</Original>
+          <Original>1.5 klicks above sea level</Original>
           <Russian>Полтора километра над уровнем моря</Russian>
         </Key>
         <Key ID="SITREP_C">
