@@ -7,31 +7,31 @@
           <Russian>БАЗА</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_1">
-          <Original>You're in Chernarus. The altitude is 1.5 km.</Original>
+          <Original>You're in Chernarus. Altitude is 1500 meters.</Original>
           <Russian>Вы в Черноруссии. Высота – полтора километра.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_2">
-          <Original>You have to capture the military base “Lopatino” and “Krasnostav”.</Original>
+          <Original>Your mission is to capture the military base “Lopatino” and “Krasnostav”.</Original>
           <Russian>Вам необходимо захватить военную базу «Лопатино» и «Красностав».</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_3">
-          <Original>Your ammo is limited due to parachute so make good use of it.</Original>
+          <Original>Your ammo is limited due to parachute at your back, so make it count.</Original>
           <Russian>Из-за парашюта ваши патроны ограничены, используйте их с умом.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_4">
-          <Original>It's snowstorming outside. Visibility is 400 m.</Original>
+          <Original>It's little stormy overboard. Visibility around 400 meters.</Original>
           <Russian>За бортом - снежная буря. Видимость 400 метров.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_5">
-          <Original>Above all, don't panic when jump out.</Original>
+          <Original>Remember, don't panic while you in mid air.</Original>
           <Russian>Главное – не паникуйте когда выпрыгните.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_6">
-          <Original>Get ready. Five. Four. Three. Two. One. Go!</Original>
+          <Original>Countdown commencing. Five. Four. Three. Two. One. Jump out!</Original>
           <Russian>Приготовтесь. Пять. Четыре. Три. Два. Один. Пошли!</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_7">
-          <Original>Did you survive the fall? There's the extraction point southeast of you.</Original>
+          <Original>You still in one piece after that crash? There's CASEVAC southeast of you.</Original>
           <Russian>Вы пережили падение? Точка эвакуации к юго-востоку от вас.</Russian>
         </Key>
       </Container>
@@ -42,8 +42,8 @@
           <Russian>ЧЕРНОРУСЬ</Russian>
         </Key>
         <Key ID="SITREP_B">
-          <Original>1500 m above sea level.</Original>
-          <Russian>1500 метров над уровнем моря</Russian>
+          <Original>1.5 klicks above sea level</Original>
+          <Russian>Полтора километра над уровнем моря</Russian>
         </Key>
         <Key ID="SITREP_C">
           <Original>One minute to target</Original>
@@ -75,8 +75,8 @@
 
       <Container name="TASK">
         <Key ID="STR_TASK_Boat">
-          <Original>MOVE TO EXTRACTION</Original>
-          <Russian>ДОБЕРИТЕСЬ ЭВАКУАЦИИ</Russian>
+          <Original>MOVE TO CASEVAC</Original>
+          <Russian>ДОБЕРИТЕСЬ ДО ЭВАКУАЦИИ</Russian>
         </Key>
         <Key ID="STR_TASK_Lop">
           <Original>CAPTURE LOPATINO</Original>
@@ -98,15 +98,15 @@
 
       <Container name="AWARD">
         <Key ID="AWARD_Silver">
-          <Original>Was awarded a medal 'Silver Star'</Original>
+          <Original>Was awarded a 'Silver Star' medal</Original>
           <Russian>Награжден медалью 'Серебряная Звезда'.</Russian>
         </Key>
         <Key ID="AWARD_Robust">
-          <Original>Was awarded a medal 'Service Cross'</Original>
+          <Original>Was awarded a 'Service Cross' medal</Original>
           <Russian>Награжден крестом 'За выдающиеся заслуги'</Russian>
         </Key>
         <Key ID="AWARD_Purple">
-          <Original>Was awarded the posthumous medal 'Purple Heart'</Original>
+          <Original>Was awarded posthumously 'Purple Heart' medal</Original>
           <Russian>Посмертно награжден медалью 'Пурпурное сердце'</Russian>
         </Key>
         <Key ID="AWARD_Kills">
