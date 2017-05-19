@@ -10,7 +10,7 @@
 			localize "SITREP_A",
 			localize "SITREP_C",
 			localize "SITREP_D"
-		] spawn BIS_fnc_EXP_camp_SITREP;
+		] spawn BIS_fnc_infoText;
 		waitUntil{sleep 0.5; vehicle player == player};
 
 		0 fadeSound 0.7;

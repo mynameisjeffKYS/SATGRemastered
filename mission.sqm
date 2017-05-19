@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=630;
+		nextID=634;
 	};
 	class MarkerIDProvider
 	{
@@ -29,22 +29,29 @@ addons[]=
 	"A3_Boat_F_Boat_Transport_01",
 	"A3_Characters_F",
 	"rhsusf_c_weapons",
-	"ace_compat_rhs_usf3",
 	"A3_Weapons_F",
 	"task_force_radio_items",
 	"ace_nightvision",
 	"TRYK_Uniform",
-	"ace_realisticnames",
 	"ace_maptools",
 	"ace_flashlights",
-	"maa_Uniform",
 	"ace_medical",
+	"maa_Uniform",
+	"ace_compat_rhs_usf3",
 	"ace_optics",
+	"ace_realisticnames",
 	"ace_explosives",
 	"ace_vector",
 	"ace_atragmx",
 	"ace_kestrel4500",
+	"A3_Weapons_F_Exp_Rifles_SPAR_02",
+	"A3_Weapons_F_Acc",
+	"ace_laserpointer",
+	"A3_Weapons_F_Mark_Acc",
+	"A3_Weapons_F_Exp",
 	"Kio_Balaclava",
+	"US_ESS_Glasses_tryk",
+	"ace_hearing",
 	"A3_Modules_F_Effects",
 	"ace_advanced_ballistics",
 	"A3_Modules_F_Supports",
@@ -58,7 +65,6 @@ addons[]=
 	"rhs_c_a2port_air",
 	"rhs_c_air",
 	"rhs_c_cars",
-	"ace_hearing",
 	"A3_Modules_F_Hc",
 	"rhsusf_c_troops",
 	"RHS_US_A2_AirImport"
@@ -67,7 +73,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=33;
+		items=37;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -98,48 +104,48 @@ class AddonsMetaData
 		};
 		class Item4
 		{
-			className="ace_compat_rhs_usf3";
-			name="ACE3 - RHS USF Compatibility";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item5
-		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="task_force_radio_items";
 			name="task_force_radio_items";
 			author="[TF]Nkey";
 			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
 		};
-		class Item7
+		class Item6
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item8
+		class Item7
 		{
 			className="TRYK_Uniform";
 			name="TRYK_Uniform";
 		};
-		class Item9
+		class Item8
 		{
 			className="ace_maptools";
 			name="ACE3 - Map Tools";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item10
+		class Item9
 		{
 			className="ace_flashlights";
 			name="ACE3 - Flashlights";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item10
+		{
+			className="ace_medical";
+			name="ACE3 - Medical";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -150,8 +156,8 @@ class AddonsMetaData
 		};
 		class Item12
 		{
-			className="ace_medical";
-			name="ACE3 - Medical";
+			className="ace_compat_rhs_usf3";
+			name="ACE3 - RHS USF Compatibility";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -192,101 +198,127 @@ class AddonsMetaData
 		};
 		class Item18
 		{
-			className="Kio_Balaclava";
-			name="Kio_Balaclava";
-		};
-		class Item19
-		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item19
 		{
-			className="ace_advanced_ballistics";
-			name="ACE3 - Advanced Ballistics";
+			className="ace_laserpointer";
+			name="ACE3 - Laser Pointer";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item20
+		{
+			className="A3_Weapons_F_Mark";
+			name="Arma 3 Marksmen - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item21
 		{
-			className="ace_weather";
-			name="ACE3 - Weather";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
+			className="Kio_Balaclava";
+			name="Kio_Balaclava";
 		};
 		class Item22
 		{
-			className="rhs_c_troops";
-			name="AFRF Infantry & Equipment";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
+			className="US_ESS_Glasses_tryk";
+			name="US_ESS_Glasses_tryk";
 		};
 		class Item23
-		{
-			className="rhs_c_weapons";
-			name="AFRF Weapons Pack";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item24
-		{
-			className="ace_compat_rhs_afrf3";
-			name="ACE3 - RHS AFRF Compatibility";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item25
-		{
-			className="rhs_sounds";
-			name="AFRF Sounds";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item26
-		{
-			className="cba_modules";
-			name="Community Base Addons - Modules Component";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item27
-		{
-			className="rhs_c_a2port_air";
-			name="A2 ported air";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item28
-		{
-			className="rhs_c_air";
-			name="AFRF Planes";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item29
-		{
-			className="rhs_c_cars";
-			name="Tigr vehicles";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
-		class Item30
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item24
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item25
+		{
+			className="ace_advanced_ballistics";
+			name="ACE3 - Advanced Ballistics";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item26
+		{
+			className="ace_weather";
+			name="ACE3 - Weather";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item27
+		{
+			className="rhs_c_troops";
+			name="AFRF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item28
+		{
+			className="rhs_c_weapons";
+			name="AFRF Weapons Pack";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item29
+		{
+			className="ace_compat_rhs_afrf3";
+			name="ACE3 - RHS AFRF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item30
+		{
+			className="rhs_sounds";
+			name="AFRF Sounds";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
 		class Item31
+		{
+			className="cba_modules";
+			name="Community Base Addons - Modules Component";
+			author="CBA Team";
+			url="https://www.github.com/CBATeam/CBA_A3";
+		};
+		class Item32
+		{
+			className="rhs_c_a2port_air";
+			name="A2 ported air";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item33
+		{
+			className="rhs_c_air";
+			name="AFRF Planes";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item34
+		{
+			className="rhs_c_cars";
+			name="Tigr vehicles";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item35
 		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item32
+		class Item36
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
@@ -387,7 +419,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=62;
+		items=61;
 		class Item0
 		{
 			dataType="Marker";
@@ -523,7 +555,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=7;
+				items=9;
 				class Item0
 				{
 					dataType="Object";
@@ -545,17 +577,18 @@ class Mission
 							class primaryWeapon
 							{
 								name="rhs_weap_hk416d10_m320";
-								optics="rhsusf_acc_SpecterDR";
+								optics="rhsusf_acc_SpecterDR_3d";
 								muzzle="rhsusf_acc_nt4_black";
 								class primaryMuzzleMag
 								{
 									name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 									ammoLeft=30;
 								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
+								class secondaryMuzzleMag
+								{
+									name="UGL_FlareWhite_F";
+									ammoLeft=1;
+								};
 							};
 							class binocular
 							{
@@ -567,14 +600,8 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="SmokeShellRed";
-										count=2;
-										ammoLeft=1;
-									};
-									class Item1
 									{
 										name="rhs_mag_m67";
 										count=1;
@@ -583,7 +610,7 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=5;
 									class Item0
 									{
 										name="ACE_MapTools";
@@ -594,6 +621,21 @@ class Mission
 										name="ACE_Flashlight_XL50";
 										count=1;
 									};
+									class Item2
+									{
+										name="ACE_epinephrine";
+										count=3;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=6;
+									};
+									class Item4
+									{
+										name="ACE_fieldDressing";
+										count=15;
+									};
 								};
 							};
 							class vest
@@ -602,31 +644,54 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=1;
+									items=8;
 									class Item0
 									{
 										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-										count=9;
+										count=8;
 										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
 									};
 									class Item1
 									{
-										name="ACE_epinephrine";
-										count=5;
+										name="UGL_FlareWhite_F";
+										count=1;
+										ammoLeft=1;
 									};
 									class Item2
 									{
-										name="ACE_morphine";
-										count=5;
+										name="UGL_FlareRed_F";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="1Rnd_SmokeRed_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="1Rnd_Smoke_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item5
+									{
+										name="1Rnd_SmokeYellow_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item6
+									{
+										name="1Rnd_SmokeGreen_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item7
+									{
+										name="1Rnd_HE_Grenade_shell";
+										count=4;
+										ammoLeft=1;
 									};
 								};
 							};
@@ -756,10 +821,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -824,12 +885,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -958,10 +1019,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -1011,7 +1068,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=2;
+										count=1;
 										ammoLeft=30;
 									};
 								};
@@ -1021,22 +1078,22 @@ class Mission
 									class Item0
 									{
 										name="ACE_fieldDressing";
-										count=30;
+										count=40;
 									};
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=10;
+										count=20;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=10;
+										count=20;
 									};
 									class Item3
 									{
 										name="ACE_bloodIV";
-										count=7;
+										count=5;
 									};
 								};
 							};
@@ -1163,10 +1220,6 @@ class Mission
 									ammoLeft=5;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="ACE_VectorDay";
@@ -1235,12 +1288,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -1360,45 +1413,28 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="rhs_weap_m240B";
-								optics="rhsusf_acc_SpecterDR";
+								name="arifle_SPAR_02_blk_F";
+								optics="rhsusf_acc_SpecterDR_3d";
+								muzzle="rhsusf_acc_nt4_black";
+								flashlight="acc_pointer_IR";
+								underBarrel="bipod_01_F_blk";
 								class primaryMuzzleMag
 								{
-									name="rhsusf_50Rnd_762x51";
-									ammoLeft=50;
+									name="150Rnd_556x45_Drum_Mag_Tracer_F";
+									ammoLeft=150;
 								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
 							};
 							class binocular
 							{
-								name="Binocular";
+								name="Rangefinder";
 							};
 							class uniform
 							{
-								typeName="TRYK_U_B_PCUHsW4";
+								typeName="TRYK_U_B_PCUHsW5";
 								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
 								class ItemCargo
 								{
-									items=2;
+									items=6;
 									class Item0
 									{
 										name="ACE_MapTools";
@@ -1409,6 +1445,26 @@ class Mission
 										name="ACE_Flashlight_XL50";
 										count=1;
 									};
+									class Item2
+									{
+										name="ACE_fieldDressing";
+										count=20;
+									};
+									class Item3
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_epinephrine";
+										count=3;
+									};
+									class Item5
+									{
+										name="ACE_morphine";
+										count=6;
+									};
 								};
 							};
 							class vest
@@ -1417,31 +1473,18 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
-										name="rhsusf_50Rnd_762x51";
+										name="150Rnd_556x45_Drum_Mag_Tracer_F";
 										count=3;
-										ammoLeft=50;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
+										ammoLeft=150;
 									};
 									class Item1
 									{
-										name="ACE_epinephrine";
+										name="SmokeShellRed";
 										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
+										ammoLeft=1;
 									};
 								};
 							};
@@ -1455,8 +1498,7 @@ class Mission
 							watch="tf_microdagr";
 							radio="ItemRadio";
 							goggles="TRYK_kio_balaclava_BLK";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
+							hmd="TRYK_balaclava_BLACK_NV";
 						};
 					};
 					id=35;
@@ -1571,10 +1613,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -1639,12 +1677,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -1773,10 +1811,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -1841,12 +1875,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -1947,6 +1981,399 @@ class Mission
 						nAttributes=4;
 					};
 				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-2153.9741,1768.1255,9035.4629};
+						angles[]={0,1.5795579,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_hk416d10";
+								optics="rhsusf_acc_SpecterDR";
+								muzzle="rhsusf_acc_nt4_black";
+								underBarrel="rhsusf_acc_harris_bipod";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
+								};
+							};
+							class binocular
+							{
+								name="Binocular";
+							};
+							class uniform
+							{
+								typeName="TRYK_U_B_PCUHsW4";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="SmokeShellRed";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACE_MapTools";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="TRYK_V_PlateCarrier_blk";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="ACE_fieldDressing";
+										count=40;
+									};
+									class Item1
+									{
+										name="ACE_epinephrine";
+										count=20;
+									};
+									class Item2
+									{
+										name="ACE_morphine";
+										count=20;
+									};
+									class Item3
+									{
+										name="ACE_bloodIV";
+										count=5;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="B_Parachute";
+								isBackpack=1;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="tf_microdagr";
+							radio="ItemRadio";
+							hmd="NVGoggles";
+							headgear="TRYK_H_WH";
+						};
+					};
+					id=631;
+					type="B_medic_F";
+					atlOffset=1507.7158;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-2153.9741,1768.1255,9035.4629};
+						angles[]={0,1.5795579,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="arifle_SPAR_02_blk_F";
+								optics="rhsusf_acc_SpecterDR_3d";
+								muzzle="rhsusf_acc_nt4_black";
+								flashlight="acc_pointer_IR";
+								underBarrel="bipod_01_F_blk";
+								class primaryMuzzleMag
+								{
+									name="150Rnd_556x45_Drum_Mag_Tracer_F";
+									ammoLeft=150;
+								};
+							};
+							class binocular
+							{
+								name="Rangefinder";
+							};
+							class uniform
+							{
+								typeName="TRYK_U_B_PCUHsW5";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=6;
+									class Item0
+									{
+										name="ACE_MapTools";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_fieldDressing";
+										count=20;
+									};
+									class Item3
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_epinephrine";
+										count=3;
+									};
+									class Item5
+									{
+										name="ACE_morphine";
+										count=6;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="TRYK_V_PlateCarrier_blk";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="150Rnd_556x45_Drum_Mag_Tracer_F";
+										count=3;
+										ammoLeft=150;
+									};
+									class Item1
+									{
+										name="SmokeShellRed";
+										count=5;
+										ammoLeft=1;
+									};
+								};
+							};
+							class backpack
+							{
+								typeName="B_Parachute";
+								isBackpack=1;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="tf_microdagr";
+							radio="ItemRadio";
+							goggles="TRYK_kio_balaclava_BLK";
+							hmd="TRYK_balaclava_BLACK_NV";
+						};
+					};
+					id=633;
+					type="B_soldier_AR_F";
+					atlOffset=1507.7158;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=-1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
 			};
 			class Attributes
 			{
@@ -1955,11 +2382,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=7;
+					nextID=9;
 				};
 				class Links
 				{
-					items=7;
+					items=9;
 					class Item0
 					{
 						linkID=0;
@@ -2035,6 +2462,28 @@ class Mission
 						{
 							role=3;
 							cargoIndex=6;
+						};
+					};
+					class Item7
+					{
+						linkID=7;
+						item0=631;
+						item1=621;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item8
+					{
+						linkID=8;
+						item0=633;
+						item1=621;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=14;
 						};
 					};
 				};
@@ -16968,8 +17417,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12093.523,161.7281,12631.216};
-				angles[]={0,6.2005787,0.026668631};
+				position[]={12142.334,162.00777,12640.67};
+				angles[]={0,6.032259,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16978,9 +17427,9 @@ class Mission
 				lock="UNLOCKED";
 				textures="standard";
 			};
-			id=565;
+			id=566;
 			type="RHS_Mi8mt_Cargo_vv";
-			atlOffset=-0.17747498;
+			atlOffset=-0.0027618408;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17044,86 +17493,6 @@ class Mission
 			};
 		};
 		class Item48
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12117.845,161.77573,12640.675};
-				angles[]={6.2698507,6.032259,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				lock="UNLOCKED";
-				textures="standard";
-			};
-			id=566;
-			type="RHS_Mi8mt_Cargo_vv";
-			atlOffset=-0.17741394;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="rhs_decalNumber_type";
-					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSAIRMI8NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="NoChange";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_mag_rgd5"",""rhs_mag_nspn_red"",""rhs_mag_rdg2_white""],[10,10,10,4]],[[""ToolKit""],[1]],[[""B_Parachute""],[8]]],false]";
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="rhs_decalNumber";
-					expression="if( _value >= 0)then{if( _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cRHSAIRMI8NumberPlaces}else{[_this, [['Number', cRHSAIRMI8NumberPlaces, _this getVariable ['rhs_decalNumber_type','AviaYellow'], _value] ] ] call rhs_fnc_decalsInit}};";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="-1";
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item49
 		{
 			dataType="Object";
 			class PositionInfo
@@ -17203,7 +17572,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item50
+		class Item49
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -17294,7 +17663,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item51
+		class Item50
 		{
 			dataType="Group";
 			side="West";
@@ -17321,17 +17690,18 @@ class Mission
 							class primaryWeapon
 							{
 								name="rhs_weap_hk416d10_m320";
-								optics="rhsusf_acc_SpecterDR";
+								optics="rhsusf_acc_SpecterDR_3d";
 								muzzle="rhsusf_acc_nt4_black";
 								class primaryMuzzleMag
 								{
 									name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 									ammoLeft=30;
 								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
+								class secondaryMuzzleMag
+								{
+									name="UGL_FlareWhite_F";
+									ammoLeft=1;
+								};
 							};
 							class binocular
 							{
@@ -17343,14 +17713,8 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="SmokeShellRed";
-										count=2;
-										ammoLeft=1;
-									};
-									class Item1
 									{
 										name="rhs_mag_m67";
 										count=1;
@@ -17359,7 +17723,7 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=5;
 									class Item0
 									{
 										name="ACE_MapTools";
@@ -17370,6 +17734,21 @@ class Mission
 										name="ACE_Flashlight_XL50";
 										count=1;
 									};
+									class Item2
+									{
+										name="ACE_epinephrine";
+										count=3;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=6;
+									};
+									class Item4
+									{
+										name="ACE_fieldDressing";
+										count=15;
+									};
 								};
 							};
 							class vest
@@ -17378,31 +17757,54 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=1;
+									items=8;
 									class Item0
 									{
 										name="rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-										count=9;
+										count=8;
 										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
 									};
 									class Item1
 									{
-										name="ACE_epinephrine";
-										count=5;
+										name="UGL_FlareWhite_F";
+										count=1;
+										ammoLeft=1;
 									};
 									class Item2
 									{
-										name="ACE_morphine";
-										count=5;
+										name="UGL_FlareRed_F";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="1Rnd_SmokeRed_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item4
+									{
+										name="1Rnd_Smoke_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item5
+									{
+										name="1Rnd_SmokeYellow_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item6
+									{
+										name="1Rnd_SmokeGreen_Grenade_shell";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item7
+									{
+										name="1Rnd_HE_Grenade_shell";
+										count=4;
+										ammoLeft=1;
 									};
 								};
 							};
@@ -17513,10 +17915,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -17581,12 +17979,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -17715,10 +18113,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -17768,7 +18162,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=2;
+										count=1;
 										ammoLeft=30;
 									};
 								};
@@ -17778,22 +18172,22 @@ class Mission
 									class Item0
 									{
 										name="ACE_fieldDressing";
-										count=30;
+										count=40;
 									};
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=10;
+										count=20;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=10;
+										count=20;
 									};
 									class Item3
 									{
 										name="ACE_bloodIV";
-										count=7;
+										count=5;
 									};
 								};
 							};
@@ -17920,10 +18314,6 @@ class Mission
 									ammoLeft=5;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="ACE_VectorDay";
@@ -17992,12 +18382,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -18117,45 +18507,28 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="rhs_weap_m240B";
-								optics="rhsusf_acc_SpecterDR";
+								name="arifle_SPAR_02_blk_F";
+								optics="rhsusf_acc_SpecterDR_3d";
+								muzzle="rhsusf_acc_nt4_black";
+								flashlight="acc_pointer_IR";
+								underBarrel="bipod_01_F_blk";
 								class primaryMuzzleMag
 								{
-									name="rhsusf_50Rnd_762x51";
-									ammoLeft=50;
+									name="150Rnd_556x45_Drum_Mag_Tracer_F";
+									ammoLeft=150;
 								};
-							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
 							};
 							class binocular
 							{
-								name="Binocular";
+								name="Rangefinder";
 							};
 							class uniform
 							{
-								typeName="TRYK_U_B_PCUHsW4";
+								typeName="TRYK_U_B_PCUHsW5";
 								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="SmokeShellRed";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
 								class ItemCargo
 								{
-									items=2;
+									items=6;
 									class Item0
 									{
 										name="ACE_MapTools";
@@ -18166,6 +18539,26 @@ class Mission
 										name="ACE_Flashlight_XL50";
 										count=1;
 									};
+									class Item2
+									{
+										name="ACE_fieldDressing";
+										count=20;
+									};
+									class Item3
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_epinephrine";
+										count=3;
+									};
+									class Item5
+									{
+										name="ACE_morphine";
+										count=6;
+									};
 								};
 							};
 							class vest
@@ -18174,31 +18567,18 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
-										name="rhsusf_50Rnd_762x51";
+										name="150Rnd_556x45_Drum_Mag_Tracer_F";
 										count=3;
-										ammoLeft=50;
-									};
-								};
-								class ItemCargo
-								{
-									items=3;
-									class Item0
-									{
-										name="ACE_fieldDressing";
-										count=15;
+										ammoLeft=150;
 									};
 									class Item1
 									{
-										name="ACE_epinephrine";
+										name="SmokeShellRed";
 										count=5;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=5;
+										ammoLeft=1;
 									};
 								};
 							};
@@ -18212,8 +18592,7 @@ class Mission
 							watch="tf_microdagr";
 							radio="ItemRadio";
 							goggles="TRYK_kio_balaclava_BLK";
-							hmd="NVGoggles";
-							headgear="TRYK_H_WH";
+							hmd="TRYK_balaclava_BLACK_NV";
 						};
 					};
 					id=580;
@@ -18328,10 +18707,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -18396,12 +18771,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -18530,10 +18905,6 @@ class Mission
 									ammoLeft=30;
 								};
 							};
-							class handgun
-							{
-								name="rhsusf_weap_m9";
-							};
 							class binocular
 							{
 								name="Binocular";
@@ -18598,12 +18969,12 @@ class Mission
 									class Item1
 									{
 										name="ACE_epinephrine";
-										count=5;
+										count=3;
 									};
 									class Item2
 									{
 										name="ACE_morphine";
-										count=5;
+										count=6;
 									};
 								};
 							};
@@ -18799,7 +19170,7 @@ class Mission
 			id=575;
 			atlOffset=1507.7158;
 		};
-		class Item52
+		class Item51
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -18810,7 +19181,7 @@ class Mission
 			id=599;
 			type="HighCommand";
 		};
-		class Item53
+		class Item52
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -18822,7 +19193,7 @@ class Mission
 			type="HighCommandSubordinate";
 			atlOffset=0.00010681152;
 		};
-		class Item54
+		class Item53
 		{
 			dataType="Group";
 			side="West";
@@ -18915,7 +19286,7 @@ class Mission
 			};
 			id=613;
 		};
-		class Item55
+		class Item54
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -18980,7 +19351,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -19196,7 +19567,7 @@ class Mission
 				nAttributes=14;
 			};
 		};
-		class Item56
+		class Item55
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19267,13 +19638,13 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item57
+		class Item56
 		{
 			dataType="Group";
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -19295,23 +19666,6 @@ class Mission
 				};
 				class Item1
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={-2153.9741,1768.1256,9035.4629};
-						angles[]={0,1.5795579,0};
-					};
-					side="West";
-					class Attributes
-					{
-						ignoreByDynSimulGrid=1;
-					};
-					id=623;
-					type="rhsusf_airforce_pilot";
-					atlOffset=1507.7159;
-				};
-				class Item2
-				{
 					dataType="Waypoint";
 					position[]={5532.1362,323.84448,8677.6211};
 					completitionRadius=50;
@@ -19322,7 +19676,7 @@ class Mission
 					id=624;
 					type="Move";
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Waypoint";
 					position[]={15896.06,0.00035095215,7638.3838};
@@ -19345,11 +19699,11 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=2;
+					nextID=1;
 				};
 				class Links
 				{
-					items=2;
+					items=1;
 					class Item0
 					{
 						linkID=0;
@@ -19360,23 +19714,12 @@ class Mission
 							role=1;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=623;
-						item1=621;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
 				};
 			};
 			id=620;
 			atlOffset=1507.7158;
 		};
-		class Item58
+		class Item57
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19437,7 +19780,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item59
+		class Item58
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -19490,7 +19833,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item60
+		class Item59
 		{
 			dataType="Marker";
 			position[]={-1553.368,2.2709676e+018,12094.621};
@@ -19499,7 +19842,7 @@ class Mission
 			id=628;
 			atlOffset=2.2709676e+018;
 		};
-		class Item61
+		class Item60
 		{
 			dataType="Trigger";
 			position[]={14096.025,1.5258789e-005,10607.082};
