@@ -36,15 +36,16 @@
 		[base, _playerGroup, "intro", "actor_a_5"] call main_fnc_kbTell;
 		
 		waitUntil{sleep 0.5; plane distance2D getMarkerPos "mBuild" < 2000};
-
+		
+		[plane, False] remoteExec ["lock"];
 		[base, _playerGroup, "intro", "actor_a_6"] spawn main_fnc_kbTell;
 		sleep 6;
 		{
 			_x spawn main_fnc_HALO;
 		} forEach ((crew plane - [driver plane]) select {not isPlayer _x});
 
-		startSquad = units group (allPlayers select 0);
-		{_x setVariable ["name", name _x]} forEach startSquad;
+		missionNameSpace setVariable ["startSquad", units group (allPlayers select 0), True];
+		{_x setVariable ["name", name _x, True]} forEach startSquad;
 
 		sleep 30;
 		

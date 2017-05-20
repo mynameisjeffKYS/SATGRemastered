@@ -26,6 +26,8 @@ class CfgFunctions
 			class supply {};
 			class takeGPS {postInit = 1;};
 			class localApply {postInit = 1;};
+			class freezeTime {postInit = 1;};
+			class bodyManager {postInit = 1;};
 		};
 	};
 };

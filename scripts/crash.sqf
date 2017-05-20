@@ -1,6 +1,7 @@
 [] spawn {
 	if (hasInterface) then {
 		waitUntil{{position vehicle _x select 2 < 50} count allPlayers == 0};
+		0 fadeMusic 1;
 		playMusic "fortune";
 
 		_copter = vehicle player;
@@ -44,11 +45,13 @@
 		_posx = _posx + (sin _dir * _radius);
 		_posy = _posy + (cos _dir * _radius);	
 		
-		if ((assignedVehicleRole player find "Turret") >= 0) then {
-			moveOut player;
-			sleep 3;
-		};
-
+		//if ((assignedVehicleRole player find "Turret") >= 0) then {
+		
+			//sleep 3;
+		//};
+		unassignVehicle player;
+		moveOut player;
+		sleep 2;
 		player setPos [_posx, _posy, _posz];		
 
 		if (random 1 > 0.3) then {removeAllWeapons player};
@@ -57,6 +60,7 @@
 		if (random 1 > 0.5) then {removeGoggles player};
 		
 		player allowDamage True;
+		sleep 1;
 		player switchMove "AinjPpneMstpSnonWrflDnon_injuredHealed";
 		player setVariable ["tf_unable_to_use_radio", True];
 
