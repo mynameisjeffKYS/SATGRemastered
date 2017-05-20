@@ -6,8 +6,8 @@ sleep 2;
 
 _i = 0;
 {
-		_name = _x getVariable "name";
-		_score = _x getVariable "kills";
+		_name = _x getVariable ["name", "John Doe"];
+		_score = _x getVariable ["kills", 0];
 		_medal = "";
 		if (_score > 15) then {_medal = localize "AWARD_Silver"};
 		if (_score > 20) then {_medal = localize "AWARD_Robust"};

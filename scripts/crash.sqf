@@ -33,6 +33,11 @@
 			_copter setPos getMarkerPos "crashpos";
 		};
 
+		
+		unassignVehicle player;
+		moveOut player;
+		sleep 2;
+
 		_radius = random 20 + 10;
 		_dir = random 359;
 		
@@ -44,14 +49,7 @@
 		
 		_posx = _posx + (sin _dir * _radius);
 		_posy = _posy + (cos _dir * _radius);	
-		
-		//if ((assignedVehicleRole player find "Turret") >= 0) then {
-		
-			//sleep 3;
-		//};
-		unassignVehicle player;
-		moveOut player;
-		sleep 2;
+
 		player setPos [_posx, _posy, _posz];		
 
 		if (random 1 > 0.3) then {removeAllWeapons player};
@@ -72,7 +70,11 @@
 		
 		cutText ["", "BLACK IN"];
 		player setVariable ["tf_unable_to_use_radio", False];
-		player switchMove "Acts_UnconsciousStandUp_part1";
+		[] spawn {
+			player switchMove "Acts_UnconsciousStandUp_part1";
+			sleep 43;
+			player switchMove "";
+		};
 
 		// ["?????????","??????????","02/06/2016 1820"] spawn BIS_fnc_infoText;
 		sleep 3;

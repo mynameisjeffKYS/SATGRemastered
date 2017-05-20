@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=635;
+		nextID=637;
 	};
 	class MarkerIDProvider
 	{
@@ -2169,7 +2169,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={-2153.9741,1768.1256,9035.4629};
+						position[]={-2156.1692,1768.2612,9037.8828};
 						angles[]={0,1.5795579,0};
 					};
 					side="West";
@@ -2182,28 +2182,43 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="arifle_SPAR_02_blk_F";
-								optics="rhsusf_acc_SpecterDR_3d";
+								name="rhs_weap_hk416d10";
+								optics="rhsusf_acc_SpecterDR";
 								muzzle="rhsusf_acc_nt4_black";
-								flashlight="acc_pointer_IR";
-								underBarrel="bipod_01_F_blk";
+								underBarrel="rhsusf_acc_harris_bipod";
 								class primaryMuzzleMag
 								{
-									name="150Rnd_556x45_Drum_Mag_Tracer_F";
-									ammoLeft=150;
+									name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+									ammoLeft=30;
 								};
 							};
 							class binocular
 							{
-								name="Rangefinder";
+								name="Binocular";
 							};
 							class uniform
 							{
-								typeName="TRYK_U_B_PCUHsW5";
+								typeName="TRYK_U_B_PCUHsW4";
 								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="SmokeShellRed";
+										count=1;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=1;
+										ammoLeft=1;
+									};
+								};
 								class ItemCargo
 								{
-									items=6;
+									items=2;
 									class Item0
 									{
 										name="ACE_MapTools";
@@ -2214,46 +2229,39 @@ class Mission
 										name="ACE_Flashlight_XL50";
 										count=1;
 									};
-									class Item2
-									{
-										name="ACE_fieldDressing";
-										count=20;
-									};
-									class Item3
-									{
-										name="ACE_EarPlugs";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_epinephrine";
-										count=3;
-									};
-									class Item5
-									{
-										name="ACE_morphine";
-										count=6;
-									};
 								};
 							};
 							class vest
 							{
-								typeName="TRYK_V_PlateCarrier_blk_L";
+								typeName="TRYK_V_PlateCarrier_blk";
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=2;
+									items=1;
 									class Item0
 									{
-										name="150Rnd_556x45_Drum_Mag_Tracer_F";
-										count=4;
-										ammoLeft=150;
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=9;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=3;
+									class Item0
+									{
+										name="ACE_fieldDressing";
+										count=15;
 									};
 									class Item1
 									{
-										name="SmokeShellRed";
-										count=5;
-										ammoLeft=1;
+										name="ACE_epinephrine";
+										count=3;
+									};
+									class Item2
+									{
+										name="ACE_morphine";
+										count=6;
 									};
 								};
 							};
@@ -2266,12 +2274,12 @@ class Mission
 							compass="ItemCompass";
 							watch="tf_microdagr";
 							radio="ItemRadio";
-							goggles="TRYK_kio_balaclava_BLK";
+							headgear="TRYK_H_WH";
 						};
 					};
-					id=633;
-					type="B_soldier_AR_F";
-					atlOffset=1507.7159;
+					id=636;
+					type="B_Soldier_F";
+					atlOffset=1507.7158;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2327,7 +2335,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
@@ -2457,12 +2465,12 @@ class Mission
 					class Item8
 					{
 						linkID=8;
-						item0=633;
+						item0=636;
 						item1=621;
 						class CustomData
 						{
 							role=3;
-							cargoIndex=14;
+							cargoIndex=16;
 						};
 					};
 				};
@@ -14460,7 +14468,7 @@ class Mission
 						angles[]={0,3.56583,0};
 					};
 					side="East";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -14530,7 +14538,7 @@ class Mission
 					};
 					id=512;
 					type="rhs_msv_marksman";
-					atlOffset=0.00024414063;
+					atlOffset=4.9899902;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14580,7 +14588,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=511;
-			atlOffset=0.00024414063;
+			atlOffset=4.9899902;
 		};
 		class Item27
 		{
@@ -15916,7 +15924,7 @@ class Mission
 						angles[]={0,0.21073106,0};
 					};
 					side="East";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -15986,7 +15994,7 @@ class Mission
 					};
 					id=532;
 					type="rhs_msv_marksman";
-					atlOffset=0.00021362305;
+					atlOffset=5.0360107;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16055,7 +16063,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=531;
-			atlOffset=0.00021362305;
+			atlOffset=5.0360107;
 		};
 		class Item37
 		{
@@ -16211,7 +16219,7 @@ class Mission
 						angles[]={0,1.3554577,0};
 					};
 					side="East";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -16281,7 +16289,7 @@ class Mission
 					};
 					id=536;
 					type="rhs_msv_marksman";
-					atlOffset=0.00021362305;
+					atlOffset=4.9630432;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16350,7 +16358,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=535;
-			atlOffset=0.00021362305;
+			atlOffset=4.9630432;
 		};
 		class Item39
 		{
@@ -16368,7 +16376,7 @@ class Mission
 						angles[]={0,1.1489677,0};
 					};
 					side="East";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -16438,7 +16446,7 @@ class Mission
 					};
 					id=538;
 					type="rhs_msv_marksman";
-					atlOffset=0.00012207031;
+					atlOffset=5.0570068;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16507,7 +16515,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=537;
-			atlOffset=0.00012207031;
+			atlOffset=5.0570068;
 		};
 		class Item40
 		{

@@ -306,5 +306,6 @@ enableDebugConsole = 1;
 author = "KoBRaAndrey";
 OnLoadName = "Storm At The Gates";
 //loadScreen = "thumb.jpg";
+disableChannels[] = {0,1,2,3};
 
 #include "mission.bikb"

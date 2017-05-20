@@ -2,7 +2,7 @@
 	if (isServer) then {
 		missionNameSpace setVariable["FreezeDate", date, True];
 		while {true} do {
-			sleep 180;
+			sleep 90;
 			[FreezeDate] remoteExec["setDate"];
 		};
 	};
