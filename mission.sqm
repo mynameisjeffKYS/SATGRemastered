@@ -2279,7 +2279,7 @@ class Mission
 					};
 					id=636;
 					type="B_Soldier_F";
-					atlOffset=1507.7158;
+					atlOffset=1508.0314;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14468,7 +14468,7 @@ class Mission
 						angles[]={0,3.56583,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -14538,7 +14538,7 @@ class Mission
 					};
 					id=512;
 					type="rhs_msv_marksman";
-					atlOffset=4.9899902;
+					atlOffset=0.00024414063;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14588,7 +14588,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=511;
-			atlOffset=4.9899902;
+			atlOffset=0.00024414063;
 		};
 		class Item27
 		{
@@ -15924,7 +15924,7 @@ class Mission
 						angles[]={0,0.21073106,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -15994,7 +15994,7 @@ class Mission
 					};
 					id=532;
 					type="rhs_msv_marksman";
-					atlOffset=5.0360107;
+					atlOffset=0.00021362305;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16063,7 +16063,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=531;
-			atlOffset=5.0360107;
+			atlOffset=0.00021362305;
 		};
 		class Item37
 		{
@@ -16219,7 +16219,7 @@ class Mission
 						angles[]={0,1.3554577,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -16289,7 +16289,7 @@ class Mission
 					};
 					id=536;
 					type="rhs_msv_marksman";
-					atlOffset=4.9630432;
+					atlOffset=0.00021362305;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16358,7 +16358,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=535;
-			atlOffset=4.9630432;
+			atlOffset=0.00021362305;
 		};
 		class Item39
 		{
@@ -16376,7 +16376,7 @@ class Mission
 						angles[]={0,1.1489677,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						ignoreByDynSimulGrid=1;
@@ -16446,7 +16446,7 @@ class Mission
 					};
 					id=538;
 					type="rhs_msv_marksman";
-					atlOffset=5.0570068;
+					atlOffset=0.00012207031;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16515,7 +16515,7 @@ class Mission
 				dynamicSimulation=1;
 			};
 			id=537;
-			atlOffset=5.0570068;
+			atlOffset=0.00012207031;
 		};
 		class Item40
 		{

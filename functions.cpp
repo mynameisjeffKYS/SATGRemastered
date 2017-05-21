@@ -28,6 +28,7 @@ class CfgFunctions
 			class localApply {postInit = 1;};
 			class freezeTime {postInit = 1;};
 			class bodyManager {postInit = 1;};
+			class hidePonds {postInit = 1;};
 		};
 	};
 };
