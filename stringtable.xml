@@ -15,15 +15,15 @@
           <Russian>Вам необходимо захватить военную базу «Лопатино» и «Красностав».</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_3">
-          <Original>Your ammo is limited due to parachute at your back, so make it count.</Original>
+          <Original>Your ammo is limited due to parachute at your back, so use it smart.</Original>
           <Russian>Из-за парашюта ваши патроны ограничены, используйте их с умом.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_4">
-          <Original>It's little stormy overboard. Visibility around 400 meters.</Original>
+          <Original>There's a blizzard overboard. Visibility around 400 meters.</Original>
           <Russian>За бортом - снежная буря. Видимость 400 метров.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_5">
-          <Original>Remember, don't panic while you in mid air.</Original>
+          <Original>Remember, don't panic while in mid air.</Original>
           <Russian>Главное – не паникуйте когда выпрыгните.</Russian>
         </Key>
         <Key ID="STR_ACTOR_A_6">
