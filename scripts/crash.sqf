@@ -1,6 +1,7 @@
 [] spawn {
 	if (hasInterface) then {
 		waitUntil{{position vehicle _x select 2 < 50} count allPlayers == 0};
+		0 fadeMusic 1;
 		playMusic "fortune";
 
 		_copter = vehicle player;
@@ -32,6 +33,11 @@
 			_copter setPos getMarkerPos "crashpos";
 		};
 
+		
+		unassignVehicle player;
+		moveOut player;
+		sleep 2;
+
 		_radius = random 20 + 10;
 		_dir = random 359;
 		
@@ -43,11 +49,6 @@
 		
 		_posx = _posx + (sin _dir * _radius);
 		_posy = _posy + (cos _dir * _radius);	
-		
-		if ((assignedVehicleRole player find "Turret") >= 0) then {
-			moveOut player;
-			sleep 3;
-		};
 
 		player setPos [_posx, _posy, _posz];		
 
@@ -57,6 +58,7 @@
 		if (random 1 > 0.5) then {removeGoggles player};
 		
 		player allowDamage True;
+		sleep 1;
 		player switchMove "AinjPpneMstpSnonWrflDnon_injuredHealed";
 		player setVariable ["tf_unable_to_use_radio", True];
 
@@ -68,7 +70,11 @@
 		
 		cutText ["", "BLACK IN"];
 		player setVariable ["tf_unable_to_use_radio", False];
-		player switchMove "Acts_UnconsciousStandUp_part1";
+		[] spawn {
+			player switchMove "Acts_UnconsciousStandUp_part1";
+			sleep 43;
+			player switchMove "";
+		};
 
 		// ["?????????","??????????","02/06/2016 1820"] spawn BIS_fnc_infoText;
 		sleep 3;

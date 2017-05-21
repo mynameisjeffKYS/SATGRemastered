@@ -4,7 +4,10 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-	// client only
+	[] spawn {
+		sleep 3;
+		TF_terrain_interception_coefficient = 18;
+	};
 };
 
 execVM "scripts\intro.sqf";
